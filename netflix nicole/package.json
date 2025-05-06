@@ -12,11 +12,3 @@
     "vite": "^6.3.5"
   }
 }
-
-{
-  "scripts": {
-    "dev": "vite",              // Comando para desenvolvimento local
-    "build": "vite build",      // Comando para produção
-    "serve": "vite preview"     // Comando para visualizar a build
-  }
-}
