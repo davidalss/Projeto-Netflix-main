@@ -1,0 +1,13 @@
+{
+  "devDependencies": {
+    "vite": "^6.3.5"
+  }
+}
+
+{
+  "scripts": {
+    "dev": "vite",          // Para rodar o servidor local de desenvolvimento
+    "build": "vite build",  // Para gerar a versão de produção
+    "serve": "vite preview" // Para visualizar a versão compilada
+  }
+}
