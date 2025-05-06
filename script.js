@@ -69,4 +69,16 @@ document.addEventListener('click', function(event) {
     }
 });
 
+abrirBtn.addEventListener('click', () => {
+    modal.classList.add('mostrar');
+    video.currentTime = 0;
+    video.play();
+});
+
+modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+        modal.classList.remove('mostrar');
+        video.pause();
+    }
+});
 

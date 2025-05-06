@@ -26,7 +26,183 @@
           </ul>
         </nav>
       </header>
-      
+     
+      <section class="container__background">
+        <video class="video__fundo" autoplay muted loop playsinline>
+            <source src="/vid/RITMO PERIGOSO.mp4" type="video/mp4">
+        </video>
+    
+        <div class="overlay__conteudo">
+
+            <p class="banner__descricao">
+                Neste filme, viva a intensa história de <strong>Nicole</strong> e <strong>David</strong>,<br>
+                dois jovens dançarinos de salsa que desafiam as regras<br>
+                para conquistar seu espaço nas ruas.<br><br>
+                Unidos pela paixão e pelos ritmos latinos,<br>
+                eles enfrentam o mundo com passos marcantes<br>
+                e corações em perfeita sintonia.
+              </p>
+
+    <div class="banner__botoes">
+      <button id="abrir-video" class="btn-play">
+        <img src="img/Play.png" class="icon"> Assistir
+      </button>
+      <button class="btn-info">
+        <img src="img/info.png" class="icon"> Mais Informações
+      </button>
+    </div>
+  </div>
+        </div>
+    </section>
+    
+    <!-- Modal de Vídeo -->
+<div id="videoModal" class="video-modal">
+    <div class="video-container">
+      <video id="videoPlayer" controls>
+        <source src="/vid/RITMO PERIGOSO.mp4" type="video/mp4">
+        Seu navegador não suporta vídeo.
+      </video>
+    </div>
+  </div>
+  <script>
+    const abrirVideoBtn = document.getElementById('abrir-video');
+    const modal = document.getElementById('videoModal');
+    const video = document.getElementById('videoPlayer');
+  
+    abrirVideoBtn.addEventListener('click', () => {
+      modal.classList.add('active');
+      video.currentTime = 0;
+      video.play();
+    });
+  
+    modal.addEventListener('click', (e) => {
+      if (!e.target.closest('.video-container')) {
+        modal.classList.remove('active');
+        video.pause();
+        video.currentTime = 0;
+      }
+    });
+  </script>
+    
+    <!-- Modal de Informações -->
+<div id="infoModal" class="info-modal">
+    <div class="info-container">
+      <span class="fechar-info">&times;</span>
+      <h2>Sobre o Filme</h2>
+      <p>
+        "Ritmo Perigoso" narra a jornada de Nicole e David, dois dançarinos de salsa que vivem nas ruas, enfrentando desafios com paixão e movimento. Unidos pela dança, descobrem um amor intenso e transformador.
+      </p>
+      <p>
+        💃🏻 Um filme feito com carinho por <strong>David</strong> para sua parceira incrível.  
+      </p>
+      <p>
+        💌 Quer criar algo assim para alguém especial?  
+        <a href="https://www.linkedin.com/in/davidalss/" target="_blank" class="linkedin-link">Entre em contato pelo LinkedIn</a>
+      </p>
+    </div>
+  </div>
+  
+    
+    <!-- SEÇÃO ASSISTIR NOVAMENTE -->
+<section class="container">
+    <p class="container__texto">Assistir novamente</p>
+    <ul class="container__lista">
+        <li class="container__video">
+            <a href="/vid/RITMO PERIGOSO.mp4" target="_blank">
+                <img src="/img/RITMO PERIGOSO.png" alt="Video" class="cropped">
+                <div class="desc">RITMO PERIGOSO</div>
+            </a>
+        </li>
+        <li class="container__video">
+            <a href="/vid/LAÇOS DE SANGUE.mp4">
+                <img src="/img/LAÇOS DE SANGUE.png" alt="Video" class="cropped">
+                <div class="desc">LAÇOS DE SANGUE</div>
+            </a>
+        </li>
+        <li class="container__video">
+            <a href="/vid/OS GATOS.mp4">
+                <img src="/img/OS GATOS.png" alt="Video" class="cropped">
+                <div class="desc">OS GATOS DE Nischrödinger</div>
+            </a>
+        </li>
+    </a>
+</li>
+<div class="container__video carrossel_item">
+    <a href="/vid/SENTIMENTO VIVO.mp4">
+        <img src="/img/SENTIMENTO VIVO.png" alt="Video" class="cropped">
+        <div class="desc">SENTIMENTO VIVO</div>
+    </a>
+    </ul>
+</section>
+
+<!-- SEÇÃO MINHA LISTA -->
+<section class="container">
+    <p class="container__texto">Minha Lista</p>
+    <ul class="container__lista">
+        <li class="container__video">
+            <a href="/vid/RITMO PERIGOSO.mp4" target="_blank">
+                <img src="/img/RITMO PERIGOSO.png" alt="Video" class="cropped">
+                <div class="desc">RITMO PERIGOSO</div>
+            </a>
+        </li>
+    </a>
+</li>
+<div class="container__video carrossel_item">
+    <a href="/vid/SENTIMENTO VIVO.mp4">
+        <img src="/img/SENTIMENTO VIVO.png" alt="Video" class="cropped">
+        <div class="desc">SENTIMENTO VIVO</div>
+    </a>
+        <li class="container__video">
+            <a href="/vid/LAÇOS DE SANGUE.mp4">
+                <img src="/img/LAÇOS DE SANGUE.png" alt="Video" class="cropped">
+                <div class="desc">LAÇOS DE SANGUE</div>
+            </a>
+        </li>
+    </ul>
+</section>
+
+<section class="container">
+    <p class="container__texto">Todos os filmes</p>
+  
+    <ul id="carrosel" class="container__lista">
+      <li class="container__video">
+        <a href="/vid/LAÇOS DE SANGUE.mp4">
+          <img src="/img/LAÇOS DE SANGUE.png" alt="Laços de Sangue" class="cropped" />
+          <div class="desc">LAÇOS DE SANGUE</div>
+        </a>
+      </li>
+      <li class="container__video">
+        <a href="/vid/OS GATOS.mp4">
+          <img src="/img/OS GATOS.png" alt="Os Gatos de Nischrödinger" class="cropped" />
+          <div class="desc">OS GATOS DE Nischrödinger</div>
+        </a>
+      </li>
+      <li class="container__video">
+        <a href="/vid/SENTIMENTO VIVO.mp4">
+          <img src="/img/SENTIMENTO VIVO.png" alt="Sentimento Vivo" class="cropped" />
+          <div class="desc">SENTIMENTO VIVO</div>
+        </a>
+      </li>
+      <li class="container__video">
+        <a href="/vid/RITMO PERIGOSO.mp4" target="_blank">
+          <img src="/img/RITMO PERIGOSO.png" alt="Ritmo Perigoso" class="cropped" />
+          <div class="desc">RITMO PERIGOSO</div>
+        </a>
+      </li>
+    </ul>
+  </section>
+  
+
+
+    <div id="player-modal" class="player__modal">
+        <div class="player__video">
+            <video id="filme-video" controls>
+                <source src="video/filme5.mp4" type="video/mp4">
+                Seu navegador não suporta vídeo.
+            </video>
+        </div>
+    </div>
+    
     
 <!-- Botão de abrir player -->
 <button id="musica-botao">A nossa Música</button>
