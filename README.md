@@ -15,5 +15,3 @@ Fiz esse projeto do zero, programação e idealização foi feito por mim, as im
 Demorei cerca de 3 dias, começando no sábado de manhã e terminando na segunda á noite.
 
 Foi usado vscode para ser feito o site.
-
-    AAAAAA
