@@ -6,18 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Filme - Netflix</title>
     <link rel="shortcut icon" href="./img/Logo-site.png">
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./media.css">
+    <link rel="stylesheet" href="src/style.css">
+    <link rel="stylesheet" href="src/media.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
-    <script src="./script.js" defer></script> <!-- Ajuste o caminho aqui -->
+    <script src="src/main.js" defer></script> <!-- Ajuste o caminho aqui -->
 </head>
 <body>
 
     <header class="cabecalho">
         <nav class="cabecalho__conteudo">
-          <a href="./Index.html"><img src="./img/Netflix_logo.png" alt="Netflix" class="cabecalho__logo"></a>
+          <a href="/netflix nicole/index.html"><img src="/img/Netflix_logo.png" alt="Netflix" class="cabecalho__logo"></a>
           <ul class="cabecalho__menu">
             <li><a href="#" class="cabecalho__link">Início</a></li>
             <li><a href="#" class="cabecalho__link">Séries</a></li>
@@ -29,7 +29,7 @@
      
       <section class="container__background">
         <video class="video__fundo" autoplay muted loop playsinline>
-            <source src="./vid/RITMO PERIGOSO.mp4" type="video/mp4">
+            <source src="/netflix nicole/public/RITMO PERIGOSO.mp4" type="video/mp4">
         </video>
     
         <div class="overlay__conteudo">
@@ -59,7 +59,7 @@
 <div id="videoModal" class="video-modal">
     <div class="video-container">
       <video id="videoPlayer" controls>
-        <source src="./vid/RITMO PERIGOSO.mp4" type="video/mp4">
+        <source src="/netflix nicole/public/RITMO PERIGOSO.mp4" type="video/mp4">
         Seu navegador não suporta vídeo.
       </video>
     </div>
@@ -108,28 +108,28 @@
     <p class="container__texto">Assistir novamente</p>
     <ul class="container__lista">
         <li class="container__video">
-            <a href="./vid/RITMO PERIGOSO.mp4" target="_blank">
-                <img src="./img/RITMO PERIGOSO.png" alt="Video" class="cropped">
+            <a href="/netflix nicole/public/RITMO PERIGOSO.mp4" target="_blank">
+                <img src="/img/RITMO PERIGOSO.png" alt="Video" class="cropped">
                 <div class="desc">RITMO PERIGOSO</div>
             </a>
         </li>
         <li class="container__video">
-            <a href="./vid/LAÇOS DE SANGUE.mp4">
-                <img src="./img/LAÇOS DE SANGUE.png" alt="Video" class="cropped">
+            <a href="/netflix nicole/public/LAÇOS DE SANGUE.mp4">
+                <img src="/img/LAÇOS DE SANGUE.png" alt="Video" class="cropped">
                 <div class="desc">LAÇOS DE SANGUE</div>
             </a>
         </li>
         <li class="container__video">
-            <a href="./vid/OS GATOS.mp4">
-                <img src="./img/OS GATOS.png" alt="Video" class="cropped">
+            <a href="/netflix nicole/public/OS GATOS.mp4">
+                <img src="/img/OS GATOS.png" alt="Video" class="cropped">
                 <div class="desc">OS GATOS DE Nischrödinger</div>
             </a>
         </li>
     </a>
 </li>
 <div class="container__video carrossel_item">
-    <a href="./vid/SENTIMENTO VIVO.mp4">
-        <img src="./img/SENTIMENTO VIVO.png" alt="Video" class="cropped">
+    <a href="/netflix nicole/public/SENTIMENTO VIVO.mp4">
+        <img src="/img/SENTIMENTO VIVO.png" alt="Video" class="cropped">
         <div class="desc">SENTIMENTO VIVO</div>
     </a>
     </ul>
@@ -140,21 +140,21 @@
     <p class="container__texto">Minha Lista</p>
     <ul class="container__lista">
         <li class="container__video">
-            <a href="./vid/RITMO PERIGOSO.mp4" target="_blank">
-                <img src="./img/RITMO PERIGOSO.png" alt="Video" class="cropped">
+            <a href="/netflix nicole/public/RITMO PERIGOSO.mp4" target="_blank">
+                <img src="/img/RITMO PERIGOSO.png" alt="Video" class="cropped">
                 <div class="desc">RITMO PERIGOSO</div>
             </a>
         </li>
     </a>
 </li>
 <div class="container__video carrossel_item">
-    <a href="./vid/SENTIMENTO VIVO.mp4">
-        <img src="./img/SENTIMENTO VIVO.png" alt="Video" class="cropped">
+    <a href="/netflix nicole/public/SENTIMENTO VIVO.mp4">
+        <img src="/img/SENTIMENTO VIVO.png" alt="Video" class="cropped">
         <div class="desc">SENTIMENTO VIVO</div>
     </a>
         <li class="container__video">
-            <a href="./vid/LAÇOS DE SANGUE.mp4">
-                <img src="./img/LAÇOS DE SANGUE.png" alt="Video" class="cropped">
+            <a href="/netflix nicole/public/LAÇOS DE SANGUE.mp4">
+                <img src="/img/LAÇOS DE SANGUE.png" alt="Video" class="cropped">
                 <div class="desc">LAÇOS DE SANGUE</div>
             </a>
         </li>
@@ -166,43 +166,31 @@
   
     <ul id="carrosel" class="container__lista">
       <li class="container__video">
-        <a href="./vid/LAÇOS DE SANGUE.mp4">
-          <img src="./img/LAÇOS DE SANGUE.png" alt="Laços de Sangue" class="cropped" />
+        <a href="/netflix nicole/public/LAÇOS DE SANGUE.mp4">
+          <img src="/img/LAÇOS DE SANGUE.png" alt="Laços de Sangue" class="cropped" />
           <div class="desc">LAÇOS DE SANGUE</div>
         </a>
       </li>
       <li class="container__video">
-        <a href="./vid/OS GATOS.mp4">
-          <img src="./img/OS GATOS.png" alt="Os Gatos de Nischrödinger" class="cropped" />
+        <a href="/netflix nicole/public/OS GATOS.mp4">
+          <img src="/img/OS GATOS.png" alt="Os Gatos de Nischrödinger" class="cropped" />
           <div class="desc">OS GATOS DE Nischrödinger</div>
         </a>
       </li>
       <li class="container__video">
-        <a href="./vid/SENTIMENTO VIVO.mp4">
-          <img src="./img/SENTIMENTO VIVO.png" alt="Sentimento Vivo" class="cropped" />
+        <a href="/netflix nicole/public/SENTIMENTO VIVO.mp4">
+          <img src="/img/SENTIMENTO VIVO.png" alt="Sentimento Vivo" class="cropped" />
           <div class="desc">SENTIMENTO VIVO</div>
         </a>
       </li>
       <li class="container__video">
-        <a href="./vid/RITMO PERIGOSO.mp4" target="_blank">
-          <img src="./img/RITMO PERIGOSO.png" alt="Ritmo Perigoso" class="cropped" />
+        <a href="/netflix nicole/public/RITMO PERIGOSO.mp4" target="_blank">
+          <img src="/img/RITMO PERIGOSO.png" alt="Ritmo Perigoso" class="cropped" />
           <div class="desc">RITMO PERIGOSO</div>
         </a>
       </li>
     </ul>
   </section>
-  
-
-
-    <div id="player-modal" class="player__modal">
-        <div class="player__video">
-            <video id="filme-video" controls>
-                <source src="./video/filme5.mp4" type="video/mp4">
-                Seu navegador não suporta vídeo.
-            </video>
-        </div>
-    </div>
-    
     
 <!-- Botão de abrir player -->
 <button id="musica-botao">A nossa Música</button>
@@ -213,7 +201,7 @@
         <img src="img/Perfil.jpg" class="disco" alt="Capa do Disco" />
     </div>
     <div><h1 class="musica__titulo">Tim Bernardes - BB</h1></div>
-    <audio id="musica-player" src="./vid/BB.mp3" preload="auto"></audio>
+    <audio id="musica-player" src="/netflix nicole/public/BB.mp3" preload="auto"></audio>
     <button id="play-pause-btn">Play</button>
     <input id="progress-bar" type="range" value="0" min="0" max="100" />
 </div>
