@@ -2,7 +2,7 @@ import { defineConfig } from 'vite';
 import { resolve } from 'path';
 
 export default defineConfig({
-  base: './', // Garante que os caminhos relativos funcionem
+  base: '/', // Use '/' for correct path resolution in production
   build: {
     rollupOptions: {
       input: {
