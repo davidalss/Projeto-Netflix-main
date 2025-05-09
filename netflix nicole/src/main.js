@@ -11,6 +11,11 @@ const musicaPlayer = document.getElementById('musica-player');
 const playPauseBtn = document.getElementById('play-pause-btn');
 const progressBar = document.getElementById('progress-bar');
 
+// Seleção de elementos adicionais para o modal (se necessário)
+const abrirBtn = document.getElementById('abrir-btn'); // Defina o ID correto do botão
+const modal = document.getElementById('modal'); // Defina o ID correto do modal
+const video = document.getElementById('video'); // Defina o ID correto do vídeo
+
 document.querySelector('#app').innerHTML = `
   <div>
     <a href="https://vite.dev" target="_blank">
@@ -94,15 +99,18 @@ document.addEventListener('click', function(event) {
   }
 });
 
-abrirBtn.addEventListener('click', () => {
-  modal.classList.add('mostrar');
-  video.currentTime = 0;
-  video.play();
-});
+// Adicionando funcionalidade do botão "abrir-btn" e "modal"
+if (abrirBtn && modal) {
+  abrirBtn.addEventListener('click', () => {
+    modal.classList.add('mostrar');
+    video.currentTime = 0;
+    video.play();
+  });
 
-modal.addEventListener('click', (e) => {
-  if (e.target === modal) {
-      modal.classList.remove('mostrar');
-      video.pause();
-  }
-});
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+        modal.classList.remove('mostrar');
+        video.pause();
+    }
+  });
+}
