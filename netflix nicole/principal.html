@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
-    <script src="src/main.js" defer></script> <!-- Ajuste o caminho aqui -->
+    <script src="src/main.js" defer></script>
 </head>
 <body>
 
@@ -196,14 +196,14 @@
 <button id="musica-botao">A nossa Música</button>
 
 <!-- Player de música -->
-<div class="player__container">
-    <div class="disco__area">
-        <img src="public/Perfil.jpg" class="disco" alt="Capa do Disco" />
-    </div>
-    <div><h1 class="musica__titulo">Tim Bernardes - BB</h1></div>
-    <audio id="musica-player" src="public/BB.mp3" preload="auto"></audio>
-    <button id="play-pause-btn">Play</button>
-    <input id="progress-bar" type="range" value="0" min="0" max="100" />
+<div class="player__container"> <!-- Removed inline "display: none" -->
+  <div class="disco__area">
+    <img src="public/Perfil.jpg" class="disco" alt="Capa do Disco" />
+  </div>
+  <div><h1 class="musica__titulo">Tim Bernardes - BB</h1></div>
+  <audio id="musica-player" src="public/BB.mp3" preload="auto"></audio>
+  <button id="play-pause-btn">Play</button>
+  <input id="progress-bar" type="range" value="0" min="0" max="100" />
 </div>
 
 <footer class="footer">

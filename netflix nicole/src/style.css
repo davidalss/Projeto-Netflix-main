@@ -93,14 +93,14 @@ body.embacado::before {
   content: "";
   position: fixed;
   inset: 0;
-  backdrop-filter: blur(10px);
-  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px); /* Blur effect */
+  background: rgba(0, 0, 0, 0.6); /* Dark translucent overlay */
   z-index: 99;
 }
 
 /* PLAYER DE MÚSICA */
 .player__container {
-  display: flex;
+  display: none; /* Hidden by default */
   flex-direction: column;
   align-items: center;
   background: linear-gradient(145deg, #1e1e1e, #101010);
@@ -110,15 +110,15 @@ body.embacado::before {
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(0.5);
+  transform: translate(-50%, -50%); /* Remover o scale(0.5) */
   opacity: 0;
-  transition: all 0.5s ease;
+  transition: opacity 0.5s ease; /* Só a opacidade vai transitar */
   z-index: 100;
 }
 
 .player__container.aberto {
-  transform: translate(-50%, -50%) scale(1);
-  opacity: 1;
+  display: flex; /* Show the player */
+  opacity: 1; /* Fade in */
 }
 
 .disco__area {
@@ -696,11 +696,6 @@ color: #e50914;
 .info-container p {
 margin: 10px 0;
 line-height: 1.5;
-}
-
-.linkedin-link {
-color: #0a66c2;
-text-decoration: underline;
 }
 
 .fechar-info {
