@@ -76,10 +76,14 @@ document.addEventListener('DOMContentLoaded', () => {
   videoItems.forEach(item => {
     item.addEventListener('click', () => {
       const videoSrc = item.getAttribute('data-video-src');
-      videoPlayer.querySelector('source').src = videoSrc;
-      videoPlayer.load();
-      videoPlayer.play();
-      videoModal.classList.add('active');
+      if (videoSrc) {
+        videoPlayer.querySelector('source').src = videoSrc;
+        videoPlayer.load();
+        videoPlayer.play();
+        videoModal.classList.add('active');
+      } else {
+        console.error('Video source not found for item:', item);
+      }
     });
   });
 
