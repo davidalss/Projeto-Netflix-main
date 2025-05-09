@@ -58,8 +58,9 @@
     <!-- Modal de Vídeo -->
 <div id="videoModal" class="video-modal">
     <div class="video-container">
+      <span class="fechar-video">&times;</span>
       <video id="videoPlayer" controls>
-        <source src="public/RITMO PERIGOSO.mp4" type="video/mp4">
+        <source src="" type="video/mp4">
         Seu navegador não suporta vídeo.
       </video>
     </div>
@@ -107,31 +108,18 @@
 <section class="container">
     <p class="container__texto">Assistir novamente</p>
     <ul class="container__lista">
-        <li class="container__video">
-            <a href="public/RITMO PERIGOSO.mp4" target="_blank">
-                <img src="public/RITMO PERIGOSO.png" alt="Video" class="cropped">
-                <div class="desc">RITMO PERIGOSO</div>
-            </a>
+        <li class="container__video" data-video-src="public/RITMO PERIGOSO.mp4">
+            <img src="public/RITMO PERIGOSO.png" alt="Ritmo Perigoso" class="cropped">
+            <div class="desc">RITMO PERIGOSO</div>
         </li>
-        <li class="container__video">
-            <a href="public/LAÇOS DE SANGUE.mp4">
-                <img src="public/LAÇOS DE SANGUE.png" alt="Video" class="cropped">
-                <div class="desc">LAÇOS DE SANGUE</div>
-            </a>
+        <li class="container__video" data-video-src="public/LAÇOS DE SANGUE.mp4">
+            <img src="public/LAÇOS DE SANGUE.png" alt="Laços de Sangue" class="cropped">
+            <div class="desc">LAÇOS DE SANGUE</div>
         </li>
-        <li class="container__video">
-            <a href="public/OS GATOS.mp4">
-                <img src="public/OS GATOS.png" alt="Video" class="cropped">
-                <div class="desc">OS GATOS DE Nischrödinger</div>
-            </a>
+        <li class="container__video" data-video-src="public/OS GATOS.mp4">
+            <img src="public/OS GATOS.png" alt="Os Gatos de Nischrödinger" class="cropped">
+            <div class="desc">OS GATOS DE Nischrödinger</div>
         </li>
-    </a>
-</li>
-<div class="container__video carrossel_item">
-    <a href="public/SENTIMENTO VIVO.mp4">
-        <img src="public/SENTIMENTO VIVO.png" alt="Video" class="cropped">
-        <div class="desc">SENTIMENTO VIVO</div>
-    </a>
     </ul>
 </section>
 
@@ -139,24 +127,17 @@
 <section class="container">
     <p class="container__texto">Minha Lista</p>
     <ul class="container__lista">
-        <li class="container__video">
-            <a href="public/RITMO PERIGOSO.mp4" target="_blank">
-                <img src="public/RITMO PERIGOSO.png" alt="Video" class="cropped">
-                <div class="desc">RITMO PERIGOSO</div>
-            </a>
+        <li class="container__video" data-video-src="public/RITMO PERIGOSO.mp4">
+            <img src="public/RITMO PERIGOSO.png" alt="Ritmo Perigoso" class="cropped">
+            <div class="desc">RITMO PERIGOSO</div>
         </li>
-    </a>
-</li>
-<div class="container__video carrossel_item">
-    <a href="public/SENTIMENTO VIVO.mp4">
-        <img src="public/SENTIMENTO VIVO.png" alt="Video" class="cropped">
-        <div class="desc">SENTIMENTO VIVO</div>
-    </a>
-        <li class="container__video">
-            <a href="public/LAÇOS DE SANGUE.mp4">
-                <img src="public/LAÇOS DE SANGUE.png" alt="Video" class="cropped">
-                <div class="desc">LAÇOS DE SANGUE</div>
-            </a>
+        <li class="container__video" data-video-src="public/SENTIMENTO VIVO.mp4">
+            <img src="public/SENTIMENTO VIVO.png" alt="Sentimento Vivo" class="cropped">
+            <div class="desc">SENTIMENTO VIVO</div>
+        </li>
+        <li class="container__video" data-video-src="public/LAÇOS DE SANGUE.mp4">
+            <img src="public/LAÇOS DE SANGUE.png" alt="Laços de Sangue" class="cropped">
+            <div class="desc">LAÇOS DE SANGUE</div>
         </li>
     </ul>
 </section>
@@ -165,29 +146,21 @@
     <p class="container__texto">Todos os filmes</p>
   
     <ul id="carrosel" class="container__lista">
-      <li class="container__video">
-        <a href="public/LAÇOS DE SANGUE.mp4">
-          <img src="public/LAÇOS DE SANGUE.png" alt="Laços de Sangue" class="cropped" />
-          <div class="desc">LAÇOS DE SANGUE</div>
-        </a>
+      <li class="container__video" data-video-src="public/LAÇOS DE SANGUE.mp4">
+        <img src="public/LAÇOS DE SANGUE.png" alt="Laços de Sangue" class="cropped" />
+        <div class="desc">LAÇOS DE SANGUE</div>
       </li>
-      <li class="container__video">
-        <a href="public/OS GATOS.mp4">
-          <img src="public/OS GATOS.png" alt="Os Gatos de Nischrödinger" class="cropped" />
-          <div class="desc">OS GATOS DE Nischrödinger</div>
-        </a>
+      <li class="container__video" data-video-src="public/OS GATOS.mp4">
+        <img src="public/OS GATOS.png" alt="Os Gatos de Nischrödinger" class="cropped" />
+        <div class="desc">OS GATOS DE Nischrödinger</div>
       </li>
-      <li class="container__video">
-        <a href="public/SENTIMENTO VIVO.mp4">
-          <img src="public/SENTIMENTO VIVO.png" alt="Sentimento Vivo" class="cropped" />
-          <div class="desc">SENTIMENTO VIVO</div>
-        </a>
+      <li class="container__video" data-video-src="public/SENTIMENTO VIVO.mp4">
+        <img src="public/SENTIMENTO VIVO.png" alt="Sentimento Vivo" class="cropped" />
+        <div class="desc">SENTIMENTO VIVO</div>
       </li>
-      <li class="container__video">
-        <a href="public/RITMO PERIGOSO.mp4" target="_blank">
-          <img src="public/RITMO PERIGOSO.png" alt="Ritmo Perigoso" class="cropped" />
-          <div class="desc">RITMO PERIGOSO</div>
-        </a>
+      <li class="container__video" data-video-src="public/RITMO PERIGOSO.mp4">
+        <img src="public/RITMO PERIGOSO.png" alt="Ritmo Perigoso" class="cropped" />
+        <div class="desc">RITMO PERIGOSO</div>
       </li>
     </ul>
   </section>

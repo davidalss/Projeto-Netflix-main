@@ -66,4 +66,36 @@ document.addEventListener('DOMContentLoaded', () => {
   if (musicaPlayer) {
     musicaPlayer.addEventListener('timeupdate', updateProgress);
   }
+
+  const videoModal = document.getElementById('videoModal');
+  const videoPlayer = document.getElementById('videoPlayer');
+  const fecharVideo = document.querySelector('.fechar-video');
+  const videoItems = document.querySelectorAll('.container__video');
+
+  // Open video modal
+  videoItems.forEach(item => {
+    item.addEventListener('click', () => {
+      const videoSrc = item.getAttribute('data-video-src');
+      videoPlayer.querySelector('source').src = videoSrc;
+      videoPlayer.load();
+      videoPlayer.play();
+      videoModal.classList.add('active');
+    });
+  });
+
+  // Close video modal
+  fecharVideo.addEventListener('click', () => {
+    videoModal.classList.remove('active');
+    videoPlayer.pause();
+    videoPlayer.currentTime = 0;
+  });
+
+  // Close modal when clicking outside the video
+  videoModal.addEventListener('click', (e) => {
+    if (!e.target.closest('.video-container')) {
+      videoModal.classList.remove('active');
+      videoPlayer.pause();
+      videoPlayer.currentTime = 0;
+    }
+  });
 });
