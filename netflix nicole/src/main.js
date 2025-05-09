@@ -114,3 +114,33 @@ if (abrirBtn && modal) {
     }
   });
 }
+
+// Atualizar o progresso quando a barra for clicada
+progressBar.addEventListener('input', () => {
+  const progress = progressBar.value / 100;
+  musicaPlayer.currentTime = progress * musicaPlayer.duration;
+});
+
+// Garantir que o player está escondido inicialmente
+window.onload = () => {
+  playerContainer.classList.remove('aberto'); // Inicialmente escondido
+  document.body.classList.remove('embacado'); // Fundo não embaçado
+  musicaPlayer.pause(); // Não tocar música automaticamente
+};
+
+// Fechar o player quando clicar fora da área do player
+document.addEventListener('click', function (event) {
+  if (!playerContainer.contains(event.target) && !musicaBotao.contains(event.target)) {
+    // Fechar o player e voltar ao botão
+    playerContainer.classList.remove('aberto');
+    document.body.classList.remove('embacado'); // Remover o efeito de fundo embaçado
+    musicaPlayer.pause();
+    discoArea.classList.remove('girando');
+    musicaBotao.style.display = 'block'; // Mostrar o botão "A nossa Música"
+  }
+});
+
+// Adicionar eventos ao botão e ao player
+musicaBotao.addEventListener('click', abrirPlayer); // Ao clicar no botão "A nossa Música"
+playPauseBtn.addEventListener('click', togglePlayPause);
+musicaPlayer.addEventListener('timeupdate', updateProgress);
