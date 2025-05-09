@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [
     {
-      "src": "netflix nicole/index.html",
+      "src": "netflix nicole/**",
       "use": "@vercel/static"
     }
   ],
@@ -13,6 +13,9 @@
     }
   ],
   "rewrites": [
-    { "source": "/netflix-nicole/:path*", "destination": "/:path*" }
+    {
+      "source": "/:path*",
+      "destination": "/netflix nicole/:path*"
+    }
   ]
 }
