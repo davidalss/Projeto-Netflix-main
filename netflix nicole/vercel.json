@@ -6,12 +6,6 @@
       "use": "@vercel/static"
     }
   ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/netflix nicole/index.html"
-    }
-  ],
   "rewrites": [
     {
       "source": "/:path*",
