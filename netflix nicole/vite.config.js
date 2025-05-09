@@ -2,7 +2,7 @@ import { defineConfig } from 'vite';
 import { resolve } from 'path';
 
 export default defineConfig({
-  base: '/', // Use '/' for correct path resolution in production
+  base: '/', // Use '/' para garantir que os caminhos sejam resolvidos corretamente no Vercel
   build: {
     rollupOptions: {
       input: {
