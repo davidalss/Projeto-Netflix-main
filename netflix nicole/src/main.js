@@ -78,18 +78,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let hideControlsTimeout;
 
-  // Function to show video controls
+  // Function to show video controls with animation
   function showControls() {
     videoControls.style.opacity = '1';
     videoControls.style.pointerEvents = 'auto';
+    videoControls.style.transform = 'translateY(0)'; // Reset position for animation
     clearTimeout(hideControlsTimeout);
     hideControlsTimeout = setTimeout(hideControls, 10000); // Hide controls after 10 seconds
   }
 
-  // Function to hide video controls
+  // Function to hide video controls with animation
   function hideControls() {
     videoControls.style.opacity = '0';
     videoControls.style.pointerEvents = 'none';
+    videoControls.style.transform = 'translateY(20px)'; // Add subtle downward animation
   }
 
   // Add event listeners to reset the timer when interacting with the player
@@ -154,15 +156,25 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Fullscreen functionality
+  // Fullscreen functionality with toggle
   fullscreenBtn.addEventListener('click', () => {
     const videoContainer = videoModal.querySelector('.video-container');
-    if (videoContainer.requestFullscreen) {
-      videoContainer.requestFullscreen();
-    } else if (videoContainer.webkitRequestFullscreen) {
-      videoContainer.webkitRequestFullscreen();
-    } else if (videoContainer.msRequestFullscreen) {
-      videoContainer.msRequestFullscreen();
+    if (!document.fullscreenElement) {
+      if (videoContainer.requestFullscreen) {
+        videoContainer.requestFullscreen();
+      } else if (videoContainer.webkitRequestFullscreen) {
+        videoContainer.webkitRequestFullscreen();
+      } else if (videoContainer.msRequestFullscreen) {
+        videoContainer.msRequestFullscreen();
+      }
+    } else {
+      if (document.exitFullscreen) {
+        document.exitFullscreen();
+      } else if (document.webkitExitFullscreen) {
+        document.webkitExitFullscreen();
+      } else if (document.msExitFullscreen) {
+        document.msExitFullscreen();
+      }
     }
   });
 
