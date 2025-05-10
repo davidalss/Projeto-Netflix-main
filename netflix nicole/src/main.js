@@ -104,4 +104,31 @@ document.addEventListener('DOMContentLoaded', () => {
       videoPlayer.currentTime = 0;
     }
   });
+
+  const abrirVideoBtn = document.getElementById('abrir-video');
+
+  // Open video modal
+  abrirVideoBtn.addEventListener('click', () => {
+    const videoSrc = "https://res.cloudinary.com/dkwsfkdkk/video/upload/v1746843263/RITMO_PERIGOSO_dzzkta.mp4"; // Example video source
+    videoPlayer.querySelector('source').src = videoSrc;
+    videoPlayer.load();
+    videoPlayer.play();
+    videoModal.classList.add('active');
+  });
+
+  // Close video modal
+  fecharVideo.addEventListener('click', () => {
+    videoModal.classList.remove('active');
+    videoPlayer.pause();
+    videoPlayer.currentTime = 0;
+  });
+
+  // Close modal when clicking outside the video
+  videoModal.addEventListener('click', (e) => {
+    if (!e.target.closest('.video-container')) {
+      videoModal.classList.remove('active');
+      videoPlayer.pause();
+      videoPlayer.currentTime = 0;
+    }
+  });
 });
