@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Function to open the player
   function abrirPlayer() {
-    playerContainer.classList.add('aberto'); // Add the "aberto" class to make the player visible
+    playerContainer.classList.add('aberto'); // Show the player
     body.classList.add('embacado'); // Add the "embacado" class to blur/darken the background
     musicaPlayer.play(); // Start playing the music
     discoArea.classList.add('girando'); // Add spinning effect to the disc
@@ -21,9 +21,11 @@ document.addEventListener('DOMContentLoaded', () => {
     if (musicaPlayer.paused) {
       musicaPlayer.play();
       playPauseBtn.textContent = 'Pause';
+      discoArea.classList.add('girando'); // Resume spinning
     } else {
       musicaPlayer.pause();
       playPauseBtn.textContent = 'Play';
+      discoArea.classList.remove('girando'); // Stop spinning
     }
   }
 

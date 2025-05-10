@@ -15,96 +15,56 @@
 </head>
 <body>
 
-    <header class="cabecalho">
-        <nav class="cabecalho__conteudo">
-          <a href="index.html"><img src="public/Netflix_logo.png" alt="Netflix" class="cabecalho__logo"></a>
-          <ul class="cabecalho__menu">
+<header class="cabecalho">
+    <nav class="cabecalho__conteudo">
+        <a href="index.html"><img src="public/Netflix_logo.png" alt="Netflix" class="cabecalho__logo"></a>
+        <ul class="cabecalho__menu">
             <li><a href="#" class="cabecalho__link">Início</a></li>
             <li><a href="#" class="cabecalho__link">Séries</a></li>
             <li><a href="#" class="cabecalho__link">Filmes</a></li>
             <li><a href="#" class="cabecalho__link">Minha Lista</a></li>
-          </ul>
-        </nav>
-      </header>
-     
-      <section class="container__background">
-        <video class="video__fundo" autoplay muted loop playsinline>
-            <source src="public/RITMO PERIGOSO.mp4" type="video/mp4">
-        </video>
-    
-        <div class="overlay__conteudo">
+        </ul>
+    </nav>
+</header>
 
-            <p class="banner__descricao">
-                Neste filme, viva a intensa história de <strong>Nicole</strong> e <strong>David</strong>,<br>
-                dois jovens dançarinos de salsa que desafiam as regras<br>
-                para conquistar seu espaço nas ruas.<br><br>
-                Unidos pela paixão e pelos ritmos latinos,<br>
-                eles enfrentam o mundo com passos marcantes<br>
-                e corações em perfeita sintonia.
-              </p>
+<section class="container__background">
+    <video class="video__fundo" autoplay muted loop playsinline>
+        <source src="public/RITMO PERIGOSO.mp4" type="video/mp4">
+    </video>
 
-    <div class="banner__botoes">
-      <button id="abrir-video" class="btn-play">
-        <img src="public/Play.png" class="icon"> Assistir
-      </button>
-      <button class="btn-info">
-        <img src="public/info.png" class="icon"> Mais Informações
-      </button>
-    </div>
-  </div>
+    <div class="overlay__conteudo">
+        <p class="banner__descricao">
+            Neste filme, viva a intensa história de <strong>Nicole</strong> e <strong>David</strong>,<br>
+            dois jovens dançarinos de salsa que desafiam as regras<br>
+            para conquistar seu espaço nas ruas.<br><br>
+            Unidos pela paixão e pelos ritmos latinos,<br>
+            eles enfrentam o mundo com passos marcantes<br>
+            e corações em perfeita sintonia.
+        </p>
+
+        <div class="banner__botoes">
+            <button id="abrir-video" class="btn-play">
+                <img src="public/Play.png" class="icon"> Assistir
+            </button>
+            <button class="btn-info">
+                <img src="public/info.png" class="icon"> Mais Informações
+            </button>
         </div>
-    </section>
-    
-    <!-- Modal de Vídeo -->
+    </div>
+</section>
+
+<!-- Modal de Vídeo -->
 <div id="videoModal" class="video-modal">
     <div class="video-container">
-      <span class="fechar-video">&times;</span>
-      <video id="videoPlayer" controls>
-        <source src="" type="video/mp4">
-        Seu navegador não suporta vídeo.
-      </video>
+        <span class="fechar-video">&times;</span>
+        <video id="videoPlayer" controls autoplay>
+            <source src="" type="video/mp4">
+            Seu navegador não suporta vídeo.
+        </video>
     </div>
-  </div>
-  <script>
-    const abrirVideoBtn = document.getElementById('abrir-video');
-    const modal = document.getElementById('videoModal');
-    const video = document.getElementById('videoPlayer');
-  
-    abrirVideoBtn.addEventListener('click', () => {
-      modal.classList.add('active');
-      video.currentTime = 0;
-      video.play();
-    });
-  
-    modal.addEventListener('click', (e) => {
-      if (!e.target.closest('.video-container')) {
-        modal.classList.remove('active');
-        video.pause();
-        video.currentTime = 0;
-      }
-    });
-  </script>
-    
-    <!-- Modal de Informações -->
-<div id="infoModal" class="info-modal">
-    <div class="info-container">
-      <span class="fechar-info">&times;</span>
-      <h2>Sobre o Filme</h2>
-      <p>
-        "Ritmo Perigoso" narra a jornada de Nicole e David, dois dançarinos de salsa que vivem nas ruas, enfrentando desafios com paixão e movimento. Unidos pela dança, descobrem um amor intenso e transformador.
-      </p>
-      <p>
-        💃🏻 Um filme feito com carinho por <strong>David</strong> para sua parceira incrível.  
-      </p>
-      <p>
-        💌 Quer criar algo assim para alguém especial?  
-        <a href="https://www.linkedin.com/in/davidalss/" target="_blank" class="linkedin-link">Entre em contato pelo LinkedIn</a>
-      </p>
-    </div>
-  </div>
-  
-    
-    <!-- SEÇÃO ASSISTIR NOVAMENTE -->
+</div>
+
+<!-- SEÇÃO ASSISTIR NOVAMENTE -->
 <section class="container">
     <p class="container__texto">Assistir novamente</p>
     <ul class="container__lista">
@@ -144,51 +104,35 @@
 
 <section class="container">
     <p class="container__texto">Todos os filmes</p>
-  
     <ul id="carrosel" class="container__lista">
-      <li class="container__video" data-video-src="/LAÇOS DE SANGUE.mp4">
-        <img src="/LAÇOS DE SANGUE.png" alt="Laços de Sangue" class="cropped" />
-        <div class="desc">LAÇOS DE SANGUE</div>
-      </li>
-      <li class="container__video" data-video-src="/OS GATOS.mp4">
-        <img src="/OS GATOS.png" alt="Os Gatos de Nischrödinger" class="cropped" />
-        <div class="desc">OS GATOS DE Nischrödinger</div>
-      </li>
-      <li class="container__video" data-video-src="/SENTIMENTO VIVO.mp4">
-        <img src="/SENTIMENTO VIVO.png" alt="Sentimento Vivo" class="cropped" />
-        <div class="desc">SENTIMENTO VIVO</div>
-      </li>
-      <li class="container__video" data-video-src="/RITMO PERIGOSO.mp4">
-        <img src="/RITMO PERIGOSO.png" alt="Ritmo Perigoso" class="cropped" />
-        <div class="desc">RITMO PERIGOSO</div>
-      </li>
+        <li class="container__video" data-video-src="/LAÇOS DE SANGUE.mp4">
+            <img src="/LAÇOS DE SANGUE.png" alt="Laços de Sangue" class="cropped">
+            <div class="desc">LAÇOS DE SANGUE</div>
+        </li>
+        <li class="container__video" data-video-src="/OS GATOS.mp4">
+            <img src="/OS GATOS.png" alt="Os Gatos de Nischrödinger" class="cropped">
+            <div class="desc">OS GATOS DE Nischrödinger</div>
+        </li>
+        <li class="container__video" data-video-src="/SENTIMENTO VIVO.mp4">
+            <img src="/SENTIMENTO VIVO.png" alt="Sentimento Vivo" class="cropped">
+            <div class="desc">SENTIMENTO VIVO</div>
+        </li>
+        <li class="container__video" data-video-src="https://res.cloudinary.com/dkwsfkdkk/video/upload/v1746841718/BB_n63hz1.mp3">
+    <img src="/RITMO PERIGOSO.png" alt="Ritmo Perigoso" class="cropped">
+    <div class="desc">RITMO PERIGOSO</div>
+</li>
     </ul>
-  </section>
-    
-<!-- Botão de abrir player -->
-<button id="musica-botao">A nossa Música</button>
-
-<!-- Player de música -->
-<div class="player__container"> <!-- Removed inline "display: none" -->
-  <div class="disco__area">
-    <img src="public/Perfil.jpg" class="disco" alt="Capa do Disco" />
-  </div>
-  <div><h1 class="musica__titulo">Tim Bernardes - BB</h1></div>
-  <audio id="musica-player" src="public/BB.mp3" preload="auto"></audio>
-  <button id="play-pause-btn">Play</button>
-  <input id="progress-bar" type="range" value="0" min="0" max="100" />
-</div>
+</section>
 
 <footer class="footer">
     <p class="footer__texto">
-      Desenvolvido por David Alisson —
-      <span class="footer__historia">
-        Nossa história contada de forma mais divertida
-        <span></span><span></span><span></span>
-      </span>
+        Desenvolvido por David Alisson —
+        <span class="footer__historia">
+            Nossa história contada de forma mais divertida
+            <span></span><span></span><span></span>
+        </span>
     </p>
-  </footer>
-  
-  
+</footer>
+
 </body>
 </html>
