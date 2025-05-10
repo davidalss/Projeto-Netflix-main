@@ -178,4 +178,24 @@ document.addEventListener('DOMContentLoaded', () => {
       videoPlayer.msRequestFullscreen();
     }
   });
+
+  const carousels = [
+    { left: 'btn-left-assistir', right: 'btn-right-assistir', list: 'assistir-novamente' },
+    { left: 'btn-left-lista', right: 'btn-right-lista', list: 'minha-lista' },
+    { left: 'btn-left-filmes', right: 'btn-right-filmes', list: 'todos-os-filmes' },
+  ];
+
+  carousels.forEach(({ left, right, list }) => {
+    const leftBtn = document.getElementById(left);
+    const rightBtn = document.getElementById(right);
+    const listElement = document.getElementById(list);
+
+    leftBtn.addEventListener('click', () => {
+      listElement.scrollBy({ left: -300, behavior: 'smooth' });
+    });
+
+    rightBtn.addEventListener('click', () => {
+      listElement.scrollBy({ left: 300, behavior: 'smooth' });
+    });
+  });
 });

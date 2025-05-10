@@ -856,3 +856,64 @@ video::-ms-media-controls {
 #fullscreen-btn img:hover {
   transform: scale(1.2);
 }
+
+/* Carrossel */
+.carrossel {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.container__lista {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 20px;
+  padding: 10px;
+  width: 100%;
+}
+
+.container__video {
+  min-width: 300px;
+  max-width: 300px;
+  height: 200px;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.container__video:hover {
+  transform: scale(1.1);
+}
+
+.carrossel__seta {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 10;
+  padding: 10px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.carrossel__seta:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: black;
+}
+
+#btn-left-assistir,
+#btn-left-lista,
+#btn-left-filmes {
+  left: 10px;
+}
+
+#btn-right-assistir,
+#btn-right-lista,
+#btn-right-filmes {
+  right: 10px;
+}

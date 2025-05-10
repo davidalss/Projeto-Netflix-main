@@ -74,64 +74,77 @@
 
 <!-- SEÇÃO ASSISTIR NOVAMENTE -->
 <section class="container">
-    <p class="container__texto">Assistir novamente</p>
-    <ul class="container__lista">
-        <li class="container__video" data-video-src="https://res.cloudinary.com/dkwsfkdkk/video/upload/v1746843263/RITMO_PERIGOSO_dzzkta.mp4">
-            <img src="/RITMO PERIGOSO.png" alt="Ritmo Perigoso" class="cropped">
-            <div class="desc">RITMO PERIGOSO</div>
-        </li>
-        <li class="container__video" data-video-src="https://res.cloudinary.com/dkwsfkdkk/video/upload/v1746843262/LA%C3%87OS_DE_SANGUE_tptsby.mp4">
-            <img src="/LAÇOS DE SANGUE.png" alt="Laços de Sangue" class="cropped">
-            <div class="desc">LAÇOS DE SANGUE</div>
-        </li>
-        <li class="container__video" data-video-src="https://res.cloudinary.com/dkwsfkdkk/video/upload/v1746843354/OS_GATOS_liumok.mp4">
-            <img src="/OS GATOS.png" alt="Os Gatos de Nischrödinger" class="cropped">
-            <div class="desc">OS GATOS DE Nischrödinger</div>
-        </li>
-    </ul>
+    <p class="container__texto">Assistir Novamente</p>
+    <div class="carrossel">
+        <button class="carrossel__seta" id="btn-left-assistir">&#8249;</button>
+        <ul class="container__lista" id="assistir-novamente">
+            <li class="container__video" data-video-src="https://res.cloudinary.com/dkwsfkdkk/video/upload/v1746843263/RITMO_PERIGOSO_dzzkta.mp4">
+                <img src="/RITMO PERIGOSO.png" alt="Ritmo Perigoso" class="cropped">
+                <div class="desc">RITMO PERIGOSO</div>
+            </li>
+            <li class="container__video" data-video-src="https://res.cloudinary.com/dkwsfkdkk/video/upload/v1746843262/LA%C3%87OS_DE_SANGUE_tptsby.mp4">
+                <img src="/LAÇOS DE SANGUE.png" alt="Laços de Sangue" class="cropped">
+                <div class="desc">LAÇOS DE SANGUE</div>
+            </li>
+            <li class="container__video" data-video-src="https://res.cloudinary.com/dkwsfkdkk/video/upload/v1746843354/OS_GATOS_liumok.mp4">
+                <img src="/OS GATOS.png" alt="Os Gatos de Nischrödinger" class="cropped">
+                <div class="desc">OS GATOS DE Nischrödinger</div>
+            </li>
+        </ul>
+        <button class="carrossel__seta" id="btn-right-assistir">&#8250;</button>
+    </div>
 </section>
 
 <!-- SEÇÃO MINHA LISTA -->
 <section class="container">
     <p class="container__texto">Minha Lista</p>
-    <ul class="container__lista">
-        <li class="container__video" data-video-src="https://res.cloudinary.com/dkwsfkdkk/video/upload/v1746843263/RITMO_PERIGOSO_dzzkta.mp4">
-            <img src="/RITMO PERIGOSO.png" alt="Ritmo Perigoso" class="cropped">
-            <div class="desc">RITMO PERIGOSO</div>
-        </li>
-        <li class="container__video" data-video-src="https://res.cloudinary.com/dkwsfkdkk/video/upload/v1746843262/SENTIMENTO_VIVO_zub09b.mp4">
-            <img src="/SENTIMENTO VIVO.png" alt="Sentimento Vivo" class="cropped">
-            <div class="desc">SENTIMENTO VIVO</div>
-        </li>
-        <li class="container__video" data-video-src="https://res.cloudinary.com/dkwsfkdkk/video/upload/v1746843262/LA%C3%87OS_DE_SANGUE_tptsby.mp4">
-            <img src="/LAÇOS DE SANGUE.png" alt="Laços de Sangue" class="cropped">
-            <div class="desc">LAÇOS DE SANGUE</div>
-        </li>
-    </ul>
+    <div class="carrossel">
+        <button class="carrossel__seta" id="btn-left-lista">&#8249;</button>
+        <ul class="container__lista" id="minha-lista">
+            <li class="container__video" data-video-src="https://res.cloudinary.com/dkwsfkdkk/video/upload/v1746843263/RITMO_PERIGOSO_dzzkta.mp4">
+                <img src="/RITMO PERIGOSO.png" alt="Ritmo Perigoso" class="cropped">
+                <div class="desc">RITMO PERIGOSO</div>
+            </li>
+            <li class="container__video" data-video-src="https://res.cloudinary.com/dkwsfkdkk/video/upload/v1746843262/SENTIMENTO_VIVO_zub09b.mp4">
+                <img src="/SENTIMENTO VIVO.png" alt="Sentimento Vivo" class="cropped">
+                <div class="desc">SENTIMENTO VIVO</div>
+            </li>
+            <li class="container__video" data-video-src="https://res.cloudinary.com/dkwsfkdkk/video/upload/v1746843262/LA%C3%87OS_DE_SANGUE_tptsby.mp4">
+                <img src="/LAÇOS DE SANGUE.png" alt="Laços de Sangue" class="cropped">
+                <div class="desc">LAÇOS DE SANGUE</div>
+            </li>
+        </ul>
+        <button class="carrossel__seta" id="btn-right-lista">&#8250;</button>
+    </div>
 </section>
 
+<!-- SEÇÃO TODOS OS FILMES -->
 <section class="container">
-    <p class="container__texto">Todos os filmes</p>
-    <ul id="carrosel" class="container__lista">
-        <li class="container__video" data-video-src="https://res.cloudinary.com/dkwsfkdkk/video/upload/v1746843262/LA%C3%87OS_DE_SANGUE_tptsby.mp4">
-            <img src="/LAÇOS DE SANGUE.png" alt="Laços de Sangue" class="cropped">
-            <div class="desc">LAÇOS DE SANGUE</div>
-        </li>
-        <li class="container__video" data-video-src="https://res.cloudinary.com/dkwsfkdkk/video/upload/v1746843354/OS_GATOS_liumok.mp4">
-            <img src="/OS GATOS.png" alt="Os Gatos de Nischrödinger" class="cropped">
-            <div class="desc">OS GATOS DE Nischrödinger</div>
-        </li>
-        <li class="container__video" data-video-src="https://res.cloudinary.com/dkwsfkdkk/video/upload/v1746843262/SENTIMENTO_VIVO_zub09b.mp4">
-            <img src="/SENTIMENTO VIVO.png" alt="Sentimento Vivo" class="cropped">
-            <div class="desc">SENTIMENTO VIVO</div>
-        </li>
-      <li class="container__video" data-video-src="https://res.cloudinary.com/dkwsfkdkk/video/upload/v1746843263/RITMO_PERIGOSO_dzzkta.mp4">
-        <img src="/RITMO PERIGOSO.png" alt="Ritmo Perigoso" class="cropped" />
-        <div class="desc">RITMO PERIGOSO</div>
-      </li>
-    </ul>
-  </section>
-    
+    <p class="container__texto">Todos os Filmes</p>
+    <div class="carrossel">
+        <button class="carrossel__seta" id="btn-left-filmes">&#8249;</button>
+        <ul class="container__lista" id="todos-os-filmes">
+            <li class="container__video" data-video-src="https://res.cloudinary.com/dkwsfkdkk/video/upload/v1746843262/LA%C3%87OS_DE_SANGUE_tptsby.mp4">
+                <img src="/LAÇOS DE SANGUE.png" alt="Laços de Sangue" class="cropped">
+                <div class="desc">LAÇOS DE SANGUE</div>
+            </li>
+            <li class="container__video" data-video-src="https://res.cloudinary.com/dkwsfkdkk/video/upload/v1746843354/OS_GATOS_liumok.mp4">
+                <img src="/OS GATOS.png" alt="Os Gatos de Nischrödinger" class="cropped">
+                <div class="desc">OS GATOS DE Nischrödinger</div>
+            </li>
+            <li class="container__video" data-video-src="https://res.cloudinary.com/dkwsfkdkk/video/upload/v1746843262/SENTIMENTO_VIVO_zub09b.mp4">
+                <img src="/SENTIMENTO VIVO.png" alt="Sentimento Vivo" class="cropped">
+                <div class="desc">SENTIMENTO VIVO</div>
+            </li>
+            <li class="container__video" data-video-src="https://res.cloudinary.com/dkwsfkdkk/video/upload/v1746843263/RITMO_PERIGOSO_dzzkta.mp4">
+                <img src="/RITMO PERIGOSO.png" alt="Ritmo Perigoso" class="cropped">
+                <div class="desc">RITMO PERIGOSO</div>
+            </li>
+        </ul>
+        <button class="carrossel__seta" id="btn-right-filmes">&#8250;</button>
+    </div>
+</section>
+
 <!-- Botão de abrir player -->
 <button id="musica-botao">A nossa Música</button>
 
