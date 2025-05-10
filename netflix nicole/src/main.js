@@ -78,14 +78,24 @@ document.addEventListener('DOMContentLoaded', () => {
   videoItems.forEach(item => {
     item.addEventListener('click', () => {
       const videoSrc = item.getAttribute('data-video-src');
-      if (videoSrc) {
+      if (videoSrc.includes('vimeo.com')) {
+        // Handle Vimeo videos
+        const iframe = document.createElement('iframe');
+        iframe.src = videoSrc;
+        iframe.width = '100%';
+        iframe.height = '100%';
+        iframe.frameBorder = '0';
+        iframe.allowFullscreen = true;
+        videoPlayer.style.display = 'none'; // Hide the default video player
+        videoModal.querySelector('.video-container').appendChild(iframe);
+      } else {
+        // Handle regular videos
         videoPlayer.querySelector('source').src = videoSrc;
         videoPlayer.load();
         videoPlayer.play();
-        videoModal.classList.add('active');
-      } else {
-        console.error('Video source not found for item:', item);
+        videoPlayer.style.display = 'block'; // Show the default video player
       }
+      videoModal.classList.add('active');
     });
   });
 
@@ -94,6 +104,12 @@ document.addEventListener('DOMContentLoaded', () => {
     videoModal.classList.remove('active');
     videoPlayer.pause();
     videoPlayer.currentTime = 0;
+
+    // Remove any iframes (for Vimeo videos)
+    const iframe = videoModal.querySelector('iframe');
+    if (iframe) {
+      iframe.remove();
+    }
   });
 
   // Close modal when clicking outside the video
@@ -102,6 +118,12 @@ document.addEventListener('DOMContentLoaded', () => {
       videoModal.classList.remove('active');
       videoPlayer.pause();
       videoPlayer.currentTime = 0;
+
+      // Remove any iframes (for Vimeo videos)
+      const iframe = videoModal.querySelector('iframe');
+      if (iframe) {
+        iframe.remove();
+      }
     }
   });
 
