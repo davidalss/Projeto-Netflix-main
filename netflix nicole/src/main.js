@@ -74,6 +74,27 @@ document.addEventListener('DOMContentLoaded', () => {
   const fecharVideo = document.querySelector('.fechar-video');
   const videoItems = document.querySelectorAll('.container__video');
   const fullscreenBtn = document.getElementById('fullscreen-btn');
+  const videoControls = document.querySelector('.video-controls');
+
+  let hideControlsTimeout;
+
+  // Function to show video controls
+  function showControls() {
+    videoControls.style.opacity = '1';
+    videoControls.style.pointerEvents = 'auto';
+    clearTimeout(hideControlsTimeout);
+    hideControlsTimeout = setTimeout(hideControls, 10000); // Hide controls after 10 seconds
+  }
+
+  // Function to hide video controls
+  function hideControls() {
+    videoControls.style.opacity = '0';
+    videoControls.style.pointerEvents = 'none';
+  }
+
+  // Add event listeners to reset the timer when interacting with the player
+  videoModal.addEventListener('mousemove', showControls);
+  videoModal.addEventListener('click', showControls);
 
   // Open video modal
   videoItems.forEach(item => {
@@ -99,6 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
         videoPlayer.style.display = 'block'; // Show the default video player
       }
       videoModal.classList.add('active');
+      showControls(); // Show controls when the modal opens
     });
   });
 
@@ -113,6 +135,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (iframe) {
       iframe.remove();
     }
+    clearTimeout(hideControlsTimeout); // Clear the timeout when closing the modal
   });
 
   // Close modal when clicking outside the video
@@ -127,6 +150,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (iframe) {
         iframe.remove();
       }
+      clearTimeout(hideControlsTimeout); // Clear the timeout when closing the modal
     }
   });
 
