@@ -73,11 +73,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const videoPlayer = document.getElementById('videoPlayer');
   const fecharVideo = document.querySelector('.fechar-video');
   const videoItems = document.querySelectorAll('.container__video');
+  const fullscreenBtn = document.getElementById('fullscreen-btn');
 
   // Open video modal
   videoItems.forEach(item => {
     item.addEventListener('click', () => {
       const videoSrc = item.getAttribute('data-video-src');
+      const videoContainer = videoModal.querySelector('.video-container');
+
       if (videoSrc.includes('vimeo.com')) {
         // Handle Vimeo videos
         const iframe = document.createElement('iframe');
@@ -87,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
         iframe.frameBorder = '0';
         iframe.allowFullscreen = true;
         videoPlayer.style.display = 'none'; // Hide the default video player
-        videoModal.querySelector('.video-container').appendChild(iframe);
+        videoContainer.appendChild(iframe);
       } else {
         // Handle regular videos
         videoPlayer.querySelector('source').src = videoSrc;
@@ -127,6 +130,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  // Fullscreen functionality
+  fullscreenBtn.addEventListener('click', () => {
+    const videoContainer = videoModal.querySelector('.video-container');
+    if (videoContainer.requestFullscreen) {
+      videoContainer.requestFullscreen();
+    } else if (videoContainer.webkitRequestFullscreen) {
+      videoContainer.webkitRequestFullscreen();
+    } else if (videoContainer.msRequestFullscreen) {
+      videoContainer.msRequestFullscreen();
+    }
+  });
+
   const abrirVideoBtn = document.getElementById('abrir-video');
 
   // Open video modal
@@ -156,7 +171,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const currentTimeDisplay = document.getElementById('current-time');
   const durationDisplay = document.getElementById('duration');
-  const fullscreenBtn = document.getElementById('fullscreen-btn');
 
   // Play/Pause functionality
   playPauseBtn.addEventListener('click', () => {
@@ -188,17 +202,6 @@ document.addEventListener('DOMContentLoaded', () => {
   progressBar.addEventListener('input', () => {
     const seekTime = (progressBar.value / 100) * videoPlayer.duration;
     videoPlayer.currentTime = seekTime;
-  });
-
-  // Fullscreen functionality
-  fullscreenBtn.addEventListener('click', () => {
-    if (videoPlayer.requestFullscreen) {
-      videoPlayer.requestFullscreen();
-    } else if (videoPlayer.webkitRequestFullscreen) {
-      videoPlayer.webkitRequestFullscreen();
-    } else if (videoPlayer.msRequestFullscreen) {
-      videoPlayer.msRequestFullscreen();
-    }
   });
 
   const carousels = [
