@@ -831,3 +831,28 @@ color: white;
 .fechar-video:hover {
   color: var(--vermelho-netflix);
 }
+
+/* Hide default video controls */
+video::-webkit-media-controls {
+  display: none !important;
+}
+
+video::-moz-media-controls {
+  display: none !important;
+}
+
+video::-ms-media-controls {
+  display: none !important;
+}
+
+/* Fullscreen icon */
+#fullscreen-btn img {
+  width: 20px;
+  height: 20px;
+  filter: invert(1); /* Makes the icon white */
+  transition: transform 0.2s ease;
+}
+
+#fullscreen-btn img:hover {
+  transform: scale(1.2);
+}
