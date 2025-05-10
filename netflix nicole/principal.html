@@ -117,12 +117,26 @@
             <img src="/SENTIMENTO VIVO.png" alt="Sentimento Vivo" class="cropped">
             <div class="desc">SENTIMENTO VIVO</div>
         </li>
-        <li class="container__video" data-video-src="https://res.cloudinary.com/dkwsfkdkk/video/upload/v1746841718/BB_n63hz1.mp3">
-    <img src="/RITMO PERIGOSO.png" alt="Ritmo Perigoso" class="cropped">
-    <div class="desc">RITMO PERIGOSO</div>
-</li>
+      <li class="container__video" data-video-src="/RITMO PERIGOSO.mp4">
+        <img src="/RITMO PERIGOSO.png" alt="Ritmo Perigoso" class="cropped" />
+        <div class="desc">RITMO PERIGOSO</div>
+      </li>
     </ul>
-</section>
+  </section>
+    
+<!-- Botão de abrir player -->
+<button id="musica-botao">A nossa Música</button>
+
+<!-- Player de música -->
+<div class="player__container"> <!-- Removed inline "display: none" -->
+  <div class="disco__area">
+    <img src="public/Perfil.jpg" class="disco" alt="Capa do Disco" />
+  </div>
+  <div><h1 class="musica__titulo">Tim Bernardes - BB</h1></div>
+  <audio id="musica-player" src="https://res.cloudinary.com/dkwsfkdkk/video/upload/v1746841718/BB_n63hz1.mp3" preload="auto"></audio>
+  <button id="play-pause-btn">Play</button>
+  <input id="progress-bar" type="range" value="0" min="0" max="100" />
+</div>
 
 <footer class="footer">
     <p class="footer__texto">
