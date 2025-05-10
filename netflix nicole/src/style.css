@@ -785,15 +785,31 @@ color: white;
   color: white;
   font-size: 16px;
   cursor: pointer;
+  transition: color 0.3s ease, transform 0.2s ease;
 }
 
 .control-btn:hover {
   color: var(--vermelho-netflix);
+  transform: scale(1.1);
 }
 
 #progress-bar {
   flex: 1;
   margin: 0 10px;
+  height: 5px;
+  background: #444;
+  border-radius: 5px;
+  appearance: none;
+  cursor: pointer;
+}
+
+#progress-bar::-webkit-slider-thumb {
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  background: var(--vermelho-netflix);
+  border-radius: 50%;
+  cursor: pointer;
 }
 
 .time {
@@ -809,4 +825,9 @@ color: white;
   color: white;
   cursor: pointer;
   z-index: 10000;
+  transition: color 0.3s ease;
+}
+
+.fechar-video:hover {
+  color: var(--vermelho-netflix);
 }

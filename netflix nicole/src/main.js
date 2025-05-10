@@ -131,4 +131,51 @@ document.addEventListener('DOMContentLoaded', () => {
       videoPlayer.currentTime = 0;
     }
   });
+
+  const currentTimeDisplay = document.getElementById('current-time');
+  const durationDisplay = document.getElementById('duration');
+  const fullscreenBtn = document.getElementById('fullscreen-btn');
+
+  // Play/Pause functionality
+  playPauseBtn.addEventListener('click', () => {
+    if (videoPlayer.paused) {
+      videoPlayer.play();
+      playPauseBtn.textContent = 'Pause';
+    } else {
+      videoPlayer.pause();
+      playPauseBtn.textContent = 'Play';
+    }
+  });
+
+  // Update progress bar and time
+  videoPlayer.addEventListener('timeupdate', () => {
+    const progress = (videoPlayer.currentTime / videoPlayer.duration) * 100;
+    progressBar.value = progress;
+
+    // Update time displays
+    const currentMinutes = Math.floor(videoPlayer.currentTime / 60);
+    const currentSeconds = Math.floor(videoPlayer.currentTime % 60);
+    const durationMinutes = Math.floor(videoPlayer.duration / 60);
+    const durationSeconds = Math.floor(videoPlayer.duration % 60);
+
+    currentTimeDisplay.textContent = `${currentMinutes}:${currentSeconds.toString().padStart(2, '0')}`;
+    durationDisplay.textContent = `${durationMinutes}:${durationSeconds.toString().padStart(2, '0')}`;
+  });
+
+  // Seek functionality
+  progressBar.addEventListener('input', () => {
+    const seekTime = (progressBar.value / 100) * videoPlayer.duration;
+    videoPlayer.currentTime = seekTime;
+  });
+
+  // Fullscreen functionality
+  fullscreenBtn.addEventListener('click', () => {
+    if (videoPlayer.requestFullscreen) {
+      videoPlayer.requestFullscreen();
+    } else if (videoPlayer.webkitRequestFullscreen) {
+      videoPlayer.webkitRequestFullscreen();
+    } else if (videoPlayer.msRequestFullscreen) {
+      videoPlayer.msRequestFullscreen();
+    }
+  });
 });
