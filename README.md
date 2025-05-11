@@ -1,17 +1,13 @@
-# Projeto-Netflix
+Projeto Netflix Clone 💖
+🎯 Propósito
+Esse projeto foi criado como uma surpresa especial para minha namorada, em comemoração ao nosso 8 meses de namoro. A ideia foi desenvolver um clone da Netflix personalizado com conteúdos e elementos pensados especialmente para ela.
 
-## Propósito
+💡 Idealização
+A inspiração surgiu após assistir a um vídeo de um programador que fez algo semelhante. Achei a ideia incrível e resolvi criar minha própria versão. Comecei esboçando os layouts e funcionalidades em um caderno, dando forma ao que queria transmitir.
 
-Nesse projeto meu próposito era recriar um clone da Netflix com a intenção de fazer uma surpresa para minha namorada como presente de um ano de namoro.
+🛠️ Construção
+Todo o desenvolvimento foi feito do zero por mim, desde a programação até a estrutura visual. As imagens utilizadas foram retiradas da internet e adaptadas para o projeto.
 
-## Idealização
+Levei cerca de 3 dias para concluir tudo — comecei no sábado pela manhã e finalizei na noite de segunda-feira.
 
-Tive a ideía após ver um vídeo onde um programador fez a mesma coisa, então comecei a fazer rascunhos em um caderno.
-
-## Construção
-
-Fiz esse projeto do zero, programação e idealização foi feito por mim, as imagens foram retiradas da internet.
-
-Demorei cerca de 3 dias, começando no sábado de manhã e terminando na segunda á noite.
-
-Foi usado vscode para ser feito o site.
+Utilizei o Visual Studio Code como editor principal durante todo o processo.
