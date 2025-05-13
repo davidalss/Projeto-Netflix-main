@@ -11,3 +11,5 @@ Todo o desenvolvimento foi feito do zero por mim, desde a programação até a e
 Levei cerca de 3 dias para concluir tudo — comecei no sábado pela manhã e finalizei na noite de segunda-feira.
 
 Utilizei o Visual Studio Code como editor principal durante todo o processo.
+
+Link do projeto funcional: https://myheart-gamma.vercel.app/
